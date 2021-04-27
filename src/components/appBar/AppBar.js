@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './AppBar.module.scss';
-import Container from '@material-ui/core/Container';
 import Button from '../Button/Button.js';
 
 const AppBar = () => (

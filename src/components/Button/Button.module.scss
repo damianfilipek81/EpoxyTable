@@ -1,22 +1,27 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .root {
-  min-width: 150px;
-  max-width: 150px;
-  padding: 10px;
-  border-radius: 50px;
-  cursor: pointer;
-  background-position: 100% 0;
-  background-size: 300%;
-  transition: all 1s;
-  border: solid $light;
-  display: inline-block;
+  flex: 0 0 25%;
   text-align: center;
-  color: $light;
-  background-image: linear-gradient(90deg, rgb(255, 255, 255) 50%, transparent 50%);
-  margin: 0 10px;
-  &:hover {
-    background-position: 0 100%;
-    color: $primary;
+
+  a {
+    font-family: $barButton;
+    color: $light;
+    position: relative;
+    
+    &::before {
+      content: "";
+      border-bottom: 3px solid $light;
+      width: 20px;
+      display: inline-block;
+      top: 19px;
+      position: absolute;
+      transition: all 1s;
+    }
+
+    &:hover::before {
+      width: 100%;
+      transition: all 1s;
+    }
   }
 }

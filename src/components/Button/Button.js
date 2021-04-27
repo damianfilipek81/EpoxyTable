@@ -4,8 +4,11 @@ import PropTypes from 'prop-types';
 
 const Button = ({ children }) => (
   <div className={styles.root}>
-    {children}
+    <a href='#'>
+      {children}
+    </a>
   </div>
+
 )
 
 Button.propTypes = {
