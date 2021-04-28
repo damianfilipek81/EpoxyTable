@@ -1,17 +1,16 @@
 import React from 'react';
-import AppBar from '../appBar/AppBar';
-import Logo from '../Logo/Logo';
 import styles from './Home.module.scss';
+import PropTypes from 'prop-types';
+import HomeMainContent from './HomeMainContent.js';
 
-const Home = () => (
+const Home = ({ homeImages }) => (
   <div className={styles.root}>
-    <div className={`${styles.logoWrapper} ${styles.wrapper}`}>
-      <Logo />
-    </div>
-    <div className={styles.wrapper}>
-      <AppBar />
-    </div>
+    <HomeMainContent homeImages={homeImages} />
   </div>
 );
+
+Home.propTypes = {
+  homeImages: PropTypes.array,
+}
 
 export default Home;
