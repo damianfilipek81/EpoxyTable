@@ -1,0 +1,64 @@
+@import "../../styles/global.scss";
+
+.root {
+  background: $primary;
+  padding: 160px 0;
+
+  .title {
+    color: $light;
+    font-size: 30px;
+    padding-left: 70px;
+  }
+
+  .sectionWrapper {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+    max-height: 45vh;
+
+    .imageWrapper {
+      flex: 0 0 50%;
+      max-width: 45%;
+      position: relative;
+
+      &::after{
+        background: rgba(255, 255, 255, 0.2);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 20px;
+        top: 20px;
+        content: '';
+        display: inline-block;
+        transition: all 1s;
+      }
+
+      &:hover:after{
+        top: 0;
+        left: 0;
+      }
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .description {
+      flex: 0 0 50%;
+      color: $light;
+      font-family: $text;
+      padding: 40px;
+      font-size: 20px;
+
+      p {
+        font-weight: 400;
+      }
+    }
+
+    .description:nth-of-type(1) {
+      text-align: right;
+    }
+  }
+}
