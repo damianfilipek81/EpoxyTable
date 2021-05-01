@@ -1,0 +1,15 @@
+@import "../../styles/global.scss";
+
+.root {
+  flex: 0 0 33.333%;
+  display: inline-block;
+  transition: all 1s;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

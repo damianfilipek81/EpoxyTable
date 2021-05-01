@@ -5,6 +5,7 @@ import store from './redux/store';
 import AboutUs from './components/AboutUs/AboutUs';
 import ReactPageScroller from 'react-page-scroller';
 import ScrollPagination from './components/ScrollPagination/ScrollPagination.js';
+import Gallery from './components/Gallery/Gallery';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(null);
@@ -27,6 +28,7 @@ function App() {
         >
           <Home />
           <AboutUs />
+          <Gallery />
         </ReactPageScroller>
         <ScrollPagination handlePageChange={handlePageChange} />
       </div>
