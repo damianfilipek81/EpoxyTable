@@ -14,19 +14,14 @@ function App() {
     setCurrentPage(number)
   };
 
-  const handleBeforePageChange = number => {
-    console.log(number);
-  };
-
   return (
     <Provider store={store}>
       <div>
         <ReactPageScroller
           pageOnChange={handlePageChange}
-          onBeforePageScroll={handleBeforePageChange}
           customPageNumber={currentPage}
         >
-          <Home />
+          <Home handlePageChange={handlePageChange}/>
           <AboutUs />
           <Gallery />
         </ReactPageScroller>

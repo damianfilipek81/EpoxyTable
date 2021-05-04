@@ -5,9 +5,9 @@ import { Carousel } from 'react-responsive-carousel';
 import styles from './HomeMainContent.module.scss';
 import AppBar from '../appBar/AppBar';
 
-const HomeMainContent = ({ homeImages }) => (
+const HomeMainContent = ({ homeImages, handlePageChange }) => (
   <div className={styles.root}>
-    <AppBar />
+    <AppBar handlePageChange={handlePageChange}/>
     <div className={styles.carouselWrapper}>
     <Carousel autoPlay infiniteLoop emulateTouch interval={6000}>
       {homeImages.map(data => (
@@ -22,6 +22,7 @@ const HomeMainContent = ({ homeImages }) => (
 
 HomeMainContent.propTypes = {
   homeImages: PropTypes.array,
+  handlePageChange: PropTypes.func,
 }
 
 export default HomeMainContent;

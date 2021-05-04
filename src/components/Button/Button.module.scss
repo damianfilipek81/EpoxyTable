@@ -4,17 +4,20 @@
   flex: 0 0 18%;
   text-align: center;
 
-  a {
-    font-family: $barButton;
+  div {
+    font-family: $text;
     color: $light;
     position: relative;
-    
+    font-size: 30px;
+    display: inline;
+    cursor: pointer;
+
     &::before {
       content: "";
       border-bottom: 3px solid $light;
       width: 20px;
       display: inline-block;
-      top: 19px;
+      top: 39px;
       position: absolute;
       transition: all 1s;
     }
