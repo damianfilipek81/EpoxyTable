@@ -5,7 +5,7 @@ import store from './redux/store';
 import AboutUs from './components/AboutUs/AboutUs';
 import ReactPageScroller from 'react-page-scroller';
 import ScrollPagination from './components/ScrollPagination/ScrollPagination.js';
-import Gallery from './components/Gallery/Gallery';
+import Gallery from './components/Gallery/GalleryContainer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(null);

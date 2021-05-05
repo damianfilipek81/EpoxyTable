@@ -7,9 +7,64 @@
   cursor: pointer;
   border: 2px solid rgba(0, 0, 0, 0.3);
   padding: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
   img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+  }
+}
+
+.modalOpen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: infiniteBackground 5s infinite alternate;
+
+  img {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modalClose {
+  display: none;
+}
+
+@keyframes infiniteBackground {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@-webkit-keyframes infiniteBackground {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+@-moz-keyframes infiniteBackground {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.7);
   }
 }

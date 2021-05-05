@@ -4,17 +4,23 @@
   height: 100vh;
   background: #fff;
 
-  .wrapper {
+  .container {
     border-left: 2px solid rgba(0, 0, 0, 0.3);
     border-right: 2px solid rgba(0, 0, 0, 0.3);
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     height: 100vh;
-    padding: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: relative;
+    
+    .wrapper {
+      position: relative;
+      max-height: 800px;
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
     .title {
       position: absolute;

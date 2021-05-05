@@ -4,22 +4,24 @@ import styles from './Gallery.module.scss';
 import { Container } from '@material-ui/core';
 import GalleryBox from '../GalleryBox/GalleryBox';
 
-const Gallery = () => (
+const Gallery = ({ galleryImages }) => (
   <div className={styles.root}>
-    <Container className={styles.wrapper}>
-      <h2 className={styles.title}>Galeria</h2>
-      <GalleryBox width={400} height={200} image={'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg'} />
-      <GalleryBox width={300} height={300} image={'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg'} />
-      <GalleryBox width={350} height={270} image={'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg'} />
-      <GalleryBox width={300} height={300} image={'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg'} />
-      <GalleryBox width={350} height={270} image={'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg'} />
-      <GalleryBox width={400} height={200} image={'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg'} />
+    <Container className={styles.container}>
+      <div className={styles.wrapper}>
+        <h2 className={styles.title}>Galeria</h2>
+        <GalleryBox width={400} height={200} image={galleryImages[0].image} />
+        <GalleryBox width={300} height={300} image={galleryImages[1].image} />
+        <GalleryBox width={350} height={270} image={galleryImages[2].image} />
+        <GalleryBox width={300} height={300} image={galleryImages[3].image} />
+        <GalleryBox width={350} height={270} image={galleryImages[4].image} />
+        <GalleryBox width={400} height={200} image={galleryImages[5].image} />
+      </div>
     </Container>
   </div>
 )
 
 Gallery.propTypes = {
-
+  galleryImages: PropTypes.array,
 }
 
 export default Gallery;
