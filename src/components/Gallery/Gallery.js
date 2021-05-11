@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import { Container } from '@material-ui/core';
@@ -6,11 +6,21 @@ import GalleryBox from '../GalleryBox/GalleryBox';
 
 const Gallery = ({ galleryImages }) => {
   const [activePage, setActivePage] = useState(0);
-  const [animation, setAnimation] = useState(styles.slideOut);
+  const [animation, setAnimation] = useState(styles.slideIn);
+  const [overflow, setOverflow] = useState({overflow: 'visible'});
 
   const handlePageChange = (newPage) => {
-    setActivePage(newPage)
-    setAnimation(styles.slideIn)
+    setOverflow({overflow: 'hidden'})
+    setAnimation(styles.slideOut)
+    setTimeout(() => {
+      setActivePage(newPage)
+    }, 1200);
+    setTimeout(() => {
+      setAnimation(styles.slideIn)
+    }, 1200);
+    setTimeout(() => {
+      setOverflow({overflow: 'visible'})
+    }, 2400);
   }
 
   const pagesCount = Math.ceil(galleryImages.length / 6)
@@ -32,7 +42,7 @@ const Gallery = ({ galleryImages }) => {
 
   return (
     <div className={styles.root}>
-      <Container className={styles.container}>
+      <Container className={styles.container} style={overflow}>
         <div className={`${styles.wrapper} ${animation}`}>
           <h2 className={styles.title}>Galeria</h2>
           <GalleryBox width={400} height={200} image={activeImages[0].image} />

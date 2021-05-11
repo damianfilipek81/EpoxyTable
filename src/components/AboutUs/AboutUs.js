@@ -6,7 +6,7 @@ import { Container } from '@material-ui/core';
 const AboutUs = () => {
   const arr = [];
 
-  for (let i = 0; i < 20; i++){
+  for (let i = 0; i < 15; i++){
     arr.push(i);
   }
   return (
