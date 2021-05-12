@@ -6,6 +6,8 @@ import AboutUs from './components/AboutUs/AboutUs';
 import ReactPageScroller from 'react-page-scroller';
 import ScrollPagination from './components/ScrollPagination/ScrollPagination.js';
 import Gallery from './components/Gallery/GalleryContainer';
+import OurProducts from './components/OurProducts/OurProducts';
+import Contact from './components/Contact/Contact';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(null);
@@ -24,6 +26,8 @@ function App() {
           <Home handlePageChange={handlePageChange}/>
           <AboutUs />
           <Gallery />
+          <OurProducts />
+          <Contact /> 
         </ReactPageScroller>
         <ScrollPagination handlePageChange={handlePageChange} />
       </div>

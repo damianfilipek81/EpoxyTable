@@ -7,6 +7,8 @@ const ScrollPagination = ({ handlePageChange }) => (
     <span onClick={()=>handlePageChange(0)}></span>
     <span onClick={()=>handlePageChange(1)}></span>
     <span onClick={()=>handlePageChange(2)}></span>
+    <span onClick={()=>handlePageChange(3)}></span>
+    <span onClick={()=>handlePageChange(4)}></span>
   </div>
 )
 

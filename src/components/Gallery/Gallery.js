@@ -6,7 +6,7 @@ import GalleryBox from '../GalleryBox/GalleryBox';
 
 const Gallery = ({ galleryImages }) => {
   const [activePage, setActivePage] = useState(0);
-  const [animation, setAnimation] = useState(styles.slideIn);
+  const [animation, setAnimation] = useState(null);
   const [overflow, setOverflow] = useState({overflow: 'visible'});
 
   const handlePageChange = (newPage) => {
