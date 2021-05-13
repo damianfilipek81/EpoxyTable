@@ -1,3 +1,28 @@
+@import '../../styles/global.scss';
+
 .root {
   height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+
+  .title{
+    color: $primary;
+    font-size: 35px;
+    padding-left: 70px;
+    margin: 0;
+    padding-top: 20px;
+  }
+
+  .contactWrapper{
+    display: flex;
+    min-height: 500px;
+
+    .leftInfo {
+      flex: 0 0 50%;
+      background: #fff;
+    }
+    .rightInfo {
+      flex: 0 0 50%; 
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
 }
