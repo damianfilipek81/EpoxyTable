@@ -1,62 +1,39 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import { Container } from '@material-ui/core';
 import GalleryBox from '../GalleryBox/GalleryBox';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 const Gallery = ({ galleryImages }) => {
-  const [activePage, setActivePage] = useState(0);
-  const [animation, setAnimation] = useState(null);
-  const [overflow, setOverflow] = useState({overflow: 'visible'});
-
-  const handlePageChange = (newPage) => {
-    setOverflow({overflow: 'hidden'})
-    setAnimation(styles.slideOut)
-    setTimeout(() => {
-      setActivePage(newPage)
-    }, 1200);
-    setTimeout(() => {
-      setAnimation(styles.slideIn)
-    }, 1200);
-    setTimeout(() => {
-      setOverflow({overflow: 'visible'})
-    }, 2400);
-  }
 
   const pagesCount = Math.ceil(galleryImages.length / 6)
 
-  const dots = [];
+  const pages = [];
+
   for (let i = 0; i < pagesCount; i++) {
-    dots.push(
-      <li key={i}>
-        <span
-          onClick={() => handlePageChange(i)}
-          className={i === activePage ? styles.active : undefined}
-        >
-        </span>
-      </li>
-    );
+    pages.push(i);
   }
 
-  const activeImages = galleryImages.slice(activePage * 6, (activePage + 1) * 6);
+  const width = [400, 300, 350, 300, 350, 400];
+  const height = [200, 300, 270, 300, 270, 200];
 
   return (
     <div className={styles.root}>
-      <Container className={styles.container} style={overflow}>
-        <div className={`${styles.wrapper} ${animation}`}>
-          <h2 className={styles.title}>Galeria</h2>
-          <GalleryBox width={400} height={200} image={activeImages[0].image} />
-          {activeImages[1] ? <GalleryBox width={300} height={300} image={activeImages[1].image} /> : null}
-          {activeImages[2] ? <GalleryBox width={350} height={270} image={activeImages[2].image} /> : null}
-          {activeImages[3] ? <GalleryBox width={300} height={300} image={activeImages[3].image} /> : null}
-          {activeImages[4] ? <GalleryBox width={350} height={270} image={activeImages[4].image} /> : null}
-          {activeImages[5] ? <GalleryBox width={400} height={200} image={activeImages[5].image} /> : null}
-        </div>
-        <div className={styles.dots}>
-          <ul>
-            {dots}
-          </ul>
-        </div>
+      <Container className={styles.container}>
+        <h2 className={styles.title}>Galeria</h2>
+        <Carousel interval={9999999999999} emulateTouch autoPlay={false} infiniteLoop={false} showThumbs={false} className={styles.carousel} renderArrowNext={()=>false} renderArrowPrev={()=> false}>
+          {pages.map(page => {
+            const activeImages = galleryImages.slice(page * 6, (page + 1) * 6);
+            return <div className={styles.wrapper} key={page}>
+              {activeImages.map(data => {
+                const index = activeImages.indexOf(data);
+                return <GalleryBox key={index} width={width[index]} height={height[index]} image={data.image} />
+              })}
+            </div>
+          })}
+        </Carousel>
       </Container>
     </div>
   )

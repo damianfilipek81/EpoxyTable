@@ -1,14 +1,27 @@
 @import "./normalize.scss";
-@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Source+Code+Pro:wght@400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Source+Code+Pro:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
-$primary: rgb(1,1,1);
+$primary: rgb(1, 1, 1);
 $light: #ffff;
-$barButton: 'Zen Dots', cursive;
-$text: 'Quicksand', sans-serif;
+$barButton: "Zen Dots", cursive;
+$text: "Quicksand", sans-serif;
 
-
-h1,h2,h3,h4,h5,p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   font-family: $text;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

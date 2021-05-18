@@ -6,7 +6,7 @@ import AboutUs from './components/AboutUs/AboutUs';
 import ReactPageScroller from 'react-page-scroller';
 import ScrollPagination from './components/ScrollPagination/ScrollPagination.js';
 import Gallery from './components/Gallery/GalleryContainer';
-import OurProducts from './components/OurProducts/OurProducts';
+import OurProducts from './components/OurProducts/OurProductsContainer';
 import Contact from './components/Contact/Contact';
 
 function App() {
