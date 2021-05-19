@@ -23,11 +23,11 @@ function App() {
           pageOnChange={handlePageChange}
           customPageNumber={currentPage}
         >
-          <Home handlePageChange={handlePageChange}/>
+          <Home handlePageChange={handlePageChange} />
           <AboutUs />
           <Gallery />
           <OurProducts />
-          <Contact /> 
+          <Contact />
         </ReactPageScroller>
         <ScrollPagination handlePageChange={handlePageChange} />
       </div>

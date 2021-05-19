@@ -17,6 +17,10 @@
       justify-content: center;
       align-items: center;
       height: 100%;
+
+      .slick-current{
+        transform: scale(1.1) !important;
+      }
     }
   }
 }
