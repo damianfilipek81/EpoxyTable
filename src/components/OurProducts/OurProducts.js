@@ -6,9 +6,11 @@ import ProductBox from '../ProductBox/ProductBox';
 
 const OurProducts = ({ products }) => (
   <div className={styles.root}>
-    <Container>
+    <Container className={styles.container}>
       <h2 className={styles.title}>Nasze produkty</h2>
-      <ProductBox products={products} />
+      <div className={styles.wrapper}>
+        <ProductBox {...products[0]} />
+      </div>
     </Container>
   </div>
 )
