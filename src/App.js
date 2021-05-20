@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import AboutUs from './components/AboutUs/AboutUs';
 import ReactPageScroller from 'react-page-scroller';
-import ScrollPagination from './components/ScrollPagination/ScrollPagination.js';
+import SideMenu from './components/SideMenu/SideMenu.js';
 import Gallery from './components/Gallery/GalleryContainer';
 import OurProducts from './components/OurProducts/OurProductsContainer';
 import Contact from './components/Contact/Contact';
@@ -29,7 +29,7 @@ function App() {
           <OurProducts />
           <Contact />
         </ReactPageScroller>
-        <ScrollPagination handlePageChange={handlePageChange} />
+        <SideMenu handlePageChange={handlePageChange} />
       </div>
     </Provider>
   );
