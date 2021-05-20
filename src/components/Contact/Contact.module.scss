@@ -1,28 +1,119 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .root {
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  background: rgba(0, 0, 0, 1);
 
-  .title{
-    color: $primary;
+  .title {
+    color: #fff;
     font-size: 35px;
     padding-left: 70px;
     margin: 0;
     padding-top: 20px;
   }
 
-  .contactWrapper{
+  .contactWrapper {
+    height: calc(100vh - 60px);
     display: flex;
-    min-height: 500px;
+    align-items: center;
 
     .leftInfo {
       flex: 0 0 50%;
-      background: #fff;
+      padding: 50px;
     }
+    
     .rightInfo {
-      flex: 0 0 50%; 
-      background: rgba(0, 0, 0, 0.5);
+      flex: 0 0 50%;
+      padding: 50px;
+      color: #fff;
+
+      span{
+        background: #fff;
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+        font-size: 25px;
+        border-radius: 50%;
+        margin: 10px;
+
+        &:hover {
+          background: rgba(223, 222, 222, 0.7) ;
+        }
+
+        &:hover svg {
+          color: rgba(161, 161, 161, 0.7);
+        }
+
+        svg{
+          margin-left: 50%;
+          margin-top: 50%;
+          transform: translate(-50%, -50%);
+          color: rgb(22, 12, 160);
+        }
+
+        svg:nth-of-type(1){
+          color:rgb(180, 89, 157)
+        }
+      }
+
+      // a:active{
+      //   color: black;
+      // }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+      color: #fff;
+      font-family: $text;
+    }
+
+    input,
+    textarea {
+      background: rgba(161, 161, 161, 0.7);
+      padding: 0.6rem 1rem;
+      border: none;
+      margin: 0 1rem;
+      margin-top: 5px;
+      border-radius: 0.5rem;
+      outline: none;
+      color: #fff;
+      font-size: inherit;
+      font-family: $text;
+    }
+
+    textarea {
+      margin: 1rem auto;
+      width: 400px;
+      height: 200px;
+      display: block;
+      resize: none; 
+    }
+
+    button {
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      padding: 10px 15px;
+      color: rgba(10, 10, 10, 0.7);
+      font-family: inherit;
+      text-transform: uppercase;
+      outline: none;
+      transition: 0.2s;
+      cursor: pointer;
+      font-family: $text;
+
+      &:hover{
+        background: rgba(223, 222, 222, 0.7);
+      }
     }
   }
 }

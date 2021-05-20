@@ -17,15 +17,15 @@ const OurProducts = ({ products }) => {
     speed: 500,
     focusOnSelect: true,
     draggable: false,
-    initialSlide: 1,
+    currentSlide: 1,
     arrows: false,
   };
-
+  
   return (
     <div className={styles.root}>
       <Container className={styles.container}>
         <h2 className={styles.title}>Nasze produkty</h2>
-        <Slider {...settings} className={styles.wrapper}>
+        <Slider {...settings} className={styles.wrapper} >
           {products.map(product => (
             <ProductBox {...product} key={products.indexOf(product)} />
           ))}

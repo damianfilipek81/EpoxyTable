@@ -22,6 +22,7 @@ function App() {
         <ReactPageScroller
           pageOnChange={handlePageChange}
           customPageNumber={currentPage}
+          animationTimer={600}
         >
           <Home handlePageChange={handlePageChange} />
           <AboutUs />
