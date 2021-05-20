@@ -1,6 +1,6 @@
 .root {
   position: absolute;
-  z-index: 999;
+  z-index: 998;
   top: 50%;
   right: 0;
   display: flex;
@@ -12,7 +12,7 @@
     height: 20px;
     display: inline-block;
     border-radius: 50%;
-    background: rgba(64, 55, 83, 0.8);
+    background: rgba(0, 0, 0, 0.6);
     cursor: pointer;
     margin: 5px;
     transition: all 0.5s;

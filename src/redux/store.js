@@ -1,11 +1,11 @@
 import { combineReducers, createStore } from 'redux';
 import initialState from './initialState';
-import homeReducer from './homeRedux';
+import modalReducer from './modalRedux';
 
 
 // define reducers
 const reducers = {
-  home: homeReducer,
+  modal: modalReducer,
 };
 
 // add blank reducers for initial state properties without reducers

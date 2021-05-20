@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import { Container } from '@material-ui/core';
-import GalleryBox from '../GalleryBox/GalleryBox';
+import GalleryBox from '../GalleryBox/GalleryBoxContainer';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import Modal from '../Modal/ModalContainer';
 
 const Gallery = ({ galleryImages }) => {
 
@@ -35,6 +36,7 @@ const Gallery = ({ galleryImages }) => {
           })}
         </Carousel>
       </Container>
+      <Modal />
     </div>
   )
 }
