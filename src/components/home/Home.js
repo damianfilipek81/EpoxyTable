@@ -9,9 +9,9 @@ const Home = ({ homeImages, handlePageChange }) => (
   <div className={styles.root}>
     <AppBar handlePageChange={handlePageChange} />
     <div className={styles.carouselWrapper}>
-      <Carousel autoPlay infiniteLoop emulateTouch interval={6000}>
+      <Carousel autoPlay infiniteLoop emulateTouch interval={6000} dynamicHeight={true}>
         {homeImages.map(data => (
-          <div key={data.image}>
+          <div key={homeImages.indexOf(data)}>
             <img src={data.image} alt='' />
           </div>
         ))}

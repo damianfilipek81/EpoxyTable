@@ -8,8 +8,8 @@ import { Carousel } from 'react-responsive-carousel';
 import Modal from '../Modal/ModalContainer';
 
 const Gallery = ({ galleryImages }) => {
-
-  const pagesCount = Math.ceil(galleryImages.length / 6)
+  const screenWidth = window.innerWidth;
+  const pagesCount = screenWidth < 426 ? Math.ceil(galleryImages.length / 3) : Math.ceil(galleryImages.length / 6);
 
   const pages = [];
 
@@ -26,7 +26,7 @@ const Gallery = ({ galleryImages }) => {
         <h2 className={styles.title}>Galeria</h2>
         <Carousel interval={9999999999999} emulateTouch autoPlay={false} infiniteLoop={false} showThumbs={false} className={styles.carousel} renderArrowNext={()=>false} renderArrowPrev={()=> false}>
           {pages.map(page => {
-            const activeImages = galleryImages.slice(page * 6, (page + 1) * 6);
+            const activeImages = screenWidth < 426 ? galleryImages.slice(page * 3, (page + 1) * 3) : galleryImages.slice(page * 6, (page + 1) * 6);
             return <div className={styles.wrapper} key={page}>
               {activeImages.map(data => {
                 const index = activeImages.indexOf(data);

@@ -4,6 +4,7 @@
   height: 100vh;
   background: #fff;
   position: relative;
+
   .container {
     border-left: 2px solid rgba(0, 0, 0, 0.3);
     border-right: 2px solid rgba(0, 0, 0, 0.3);
@@ -34,6 +35,23 @@
     .carousel {
       p {
         display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .root {
+    .container {
+      flex-direction: column;
+
+      .wrapper {
+        padding: 0;
+      }
+
+      .title {
+        position: initial;
+        margin: 20px 0;
       }
     }
   }

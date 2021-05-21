@@ -18,7 +18,7 @@
     padding: 20px 0;
     justify-content: center;
     max-height: 45vh;
-    
+
     .imageWrapper {
       flex: 0 0 50%;
       max-width: 45%;
@@ -157,5 +157,37 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 
   to {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 426px) {
+  .root {
+    .title {
+      padding-left: 0;
+      text-align: center;
+    }
+
+    .sectionWrapper {
+      justify-content: space-between;
+
+      .imageWrapper{
+        max-width: 50%;
+
+        &::after{
+          display: none;
+        }
+      }
+
+      .description {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        h3{
+          margin: 0;
+        }
+      }
+    }
   }
 }

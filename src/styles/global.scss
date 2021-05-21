@@ -32,3 +32,15 @@ body {
   height: 18px;
   background: rgba(0, 0, 0, 0.6);
 }
+
+
+// Home component
+@media (max-width: 426px){
+  .carousel .slide img{
+    object-fit: cover;
+    height: 100%;
+  }
+  .carousel.carousel-slider .control-arrow {
+    display: none;
+  }
+}

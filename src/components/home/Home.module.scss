@@ -25,3 +25,10 @@
     display: none;
   }
 }
+
+@media (max-width: 426px){
+  .carousel .slide img{
+    object-fit: cover !important;
+    height: 100% !important;
+  }
+}
