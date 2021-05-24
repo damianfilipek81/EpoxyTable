@@ -8,6 +8,7 @@ import SideMenu from './components/SideMenu/SideMenu.js';
 import Gallery from './components/Gallery/GalleryContainer';
 import OurProducts from './components/OurProducts/OurProductsContainer';
 import Contact from './components/Contact/Contact';
+import Modal from './components/Modal/ModalContainer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(null);
@@ -31,6 +32,7 @@ function App() {
           <Contact />
         </ReactPageScroller>
         <SideMenu handlePageChange={handlePageChange} />
+        <Modal />
       </div>
     </Provider>
   );

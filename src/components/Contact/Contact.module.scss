@@ -55,10 +55,6 @@
           color:rgb(180, 89, 157)
         }
       }
-
-      // a:active{
-      //   color: black;
-      // }
     }
 
     form {
@@ -113,6 +109,56 @@
 
       &:hover{
         background: rgba(223, 222, 222, 0.7);
+      }
+    }
+  }
+}
+
+@media (max-width: 426px){
+  .root{
+    .title{
+      padding-left: 0;
+      text-align: center;
+    }
+
+    .contactWrapper{
+      flex-direction: column;
+
+      .leftInfo,
+      .rightInfo {
+        padding: 0;
+        padding-top: 10px;
+      }
+
+      form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        button {
+          padding: 7px 11px;
+        }
+
+        textarea {
+          width: 300px;
+          height: 50px;
+        }
+
+        input {
+          padding: 5px;
+          margin: 2px;
+        }
+
+        label {
+          margin-bottom: 8px;
+        }
+      }
+
+      h3,p{
+        display: inline-block;
+      }
+      p{
+        padding-left: 10px;
       }
     }
   }

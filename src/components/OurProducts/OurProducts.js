@@ -7,16 +7,17 @@ import Slider from "react-slick";
 
 
 const OurProducts = ({ products }) => {
+  const screenWidth = window.innerWidth;
 
   const settings = {
     className: "center",
     centerMode: true,
     infinite: false,
-    centerPadding: "0px",
-    slidesToShow: 3,
+    centerPadding: "30px",
+    slidesToShow: screenWidth > 426 ? 3 : 1,
     speed: 500,
     focusOnSelect: true,
-    draggable: false,
+    draggable: true,
     currentSlide: 1,
     arrows: false,
   };
