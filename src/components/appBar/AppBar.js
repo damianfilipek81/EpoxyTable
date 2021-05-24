@@ -5,7 +5,7 @@ import { Container } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 const AppBar = ({ handlePageChange }) => {
-  return (
+  return window.innerWidth > 426 ? (
     <div className={styles.root}>
       <Container className={styles.wrapper}>
         <Button pageNumber={1} handlePageChange={handlePageChange}>O nas</Button>
@@ -14,7 +14,10 @@ const AppBar = ({ handlePageChange }) => {
         <Button pageNumber={4} handlePageChange={handlePageChange}>Kontakt</Button>
       </Container>
     </div>
-  );
+  ) :
+    <div className={styles.root}>
+      <div>Logo</div>
+    </div>
 }
 
 AppBar.propTypes = {

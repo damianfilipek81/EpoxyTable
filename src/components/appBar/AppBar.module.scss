@@ -8,9 +8,17 @@
   width: 100%;
   display: flex;
   align-items: center;
+
   .wrapper {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+  }
+}
+
+
+@media (max-width: 426px){
+  .root {
+    background: #fff;
   }
 }

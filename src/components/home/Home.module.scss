@@ -28,7 +28,16 @@
 
 @media (max-width: 426px){
   .carousel .slide img{
-    object-fit: cover !important;
-    height: 100% !important;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .root {
+    .carouselWrapper{
+      div{
+        height: calc(100vh - 70px);
+        top: 70px;
+      }
+    }
   }
 }
