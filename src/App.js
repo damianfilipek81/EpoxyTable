@@ -10,6 +10,7 @@ import OurProducts from './components/OurProducts/OurProductsContainer';
 import Contact from './components/Contact/Contact';
 import Modal from './components/Modal/ModalContainer';
 import { Element } from 'react-scroll'
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(null);
@@ -36,6 +37,10 @@ function App() {
           <Contact />
         </ReactPageScroller>
         <SideMenu handlePageChange={handlePageChange} />
+        <MessengerCustomerChat
+          pageId="104202698391585"
+          appId="3976685792416337"
+        />
         <Modal />
       </div>
     </Provider>
@@ -48,6 +53,10 @@ function App() {
         <Element name='ourproducts' ><OurProducts /></Element >
         <Element name='contact' ><Contact /></Element >
         <SideMenu />
+        <MessengerCustomerChat
+          pageId="104202698391585"
+          appId="3976685792416337"
+        />
       </div >
     </Provider >
   )
