@@ -27,7 +27,7 @@ body {
   scrollbar-width: none;
 }
 
-.carousel .control-dots .dot{
+.carousel .control-dots .dot {
   width: 18px;
   height: 18px;
   background: rgba(0, 0, 0, 0.6);
@@ -38,8 +38,8 @@ body {
   padding: 20px;
 }
 // Home component
-@media (max-width: 426px){
-  .carousel .slide img{
+@media (max-width: 426px) {
+  .carousel .slide img {
     object-fit: cover;
     height: 100%;
   }
