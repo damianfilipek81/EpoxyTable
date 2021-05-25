@@ -24,6 +24,7 @@ function App() {
           pageOnChange={handlePageChange}
           customPageNumber={currentPage}
           animationTimer={500}
+          renderAllPagesOnFirstRender={true}
         >
           <Home handlePageChange={handlePageChange} />
           <AboutUs />
