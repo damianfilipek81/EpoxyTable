@@ -3,7 +3,7 @@
 .root {
   height: 100%;
   background: rgba(0, 0, 0, 1);
-
+  position: relative;
   .title {
     color: #fff;
     font-size: 35px;
@@ -13,13 +13,13 @@
   }
 
   .contactWrapper {
-    height: calc(100vh - 60px);
     display: flex;
     align-items: center;
 
     .leftInfo {
       flex: 0 0 50%;
       padding: 50px;
+      padding-bottom: 20px;
     }
     
     .rightInfo {
@@ -116,6 +116,7 @@
 
 @media (max-width: 426px){
   .root{
+    height: 100vh;
     .title{
       padding-left: 0;
       text-align: center;
@@ -123,11 +124,16 @@
 
     .contactWrapper{
       flex-direction: column;
+      height: 100%;
 
       .leftInfo,
       .rightInfo {
         padding: 0;
         padding-top: 10px;
+      }
+
+      .rightInfo{
+        text-align: center;
       }
 
       form{
@@ -156,9 +162,7 @@
 
       h3,p{
         display: inline-block;
-      }
-      p{
-        padding-left: 10px;
+        margin: 5px;
       }
     }
   }

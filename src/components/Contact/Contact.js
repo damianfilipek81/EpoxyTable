@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { settings } from '../../settings.js';
 import emailjs from 'emailjs-com';
+import FootBar from '../FootBar/FootBar';
 
 const Contact = () => {
 
@@ -58,6 +59,7 @@ const Contact = () => {
           </div>
         </div>
       </Container>
+      <FootBar />
     </div>
   )
 }

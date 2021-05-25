@@ -1,0 +1,17 @@
+.root {
+  background: rgb(46, 46, 46);
+  height: 35px;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+
+  h5{
+    color: #fff;
+    text-align: center;
+    margin: 6px;
+  }
+}

@@ -10,9 +10,9 @@ const OurProducts = ({ products }) => {
   const screenWidth = window.innerWidth;
 
   const settings = {
-    className: "center",
+    className: styles.center,
     centerMode: true,
-    infinite: false,
+    infinite: true,
     centerPadding: "30px",
     slidesToShow: screenWidth > 426 ? 3 : 1,
     speed: 500,

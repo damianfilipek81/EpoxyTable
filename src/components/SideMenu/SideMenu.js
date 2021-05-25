@@ -26,11 +26,11 @@ const SideMenu = ({ handlePageChange }) => {
             <li onClick={() => handlePageChange(4)}>Kontakt</li>
           </ul> :
           <ul>
-            <li><Link to='home' onClick={() => handleSetDropdownMenu()} spy={true} smooth={true} duration={500}>Strona główna</Link></li>
-            <li><Link to='aboutus' onClick={() => handleSetDropdownMenu()} spy={true} smooth={true} duration={500}>O nas</Link></li>
-            <li><Link to='gallery' onClick={() => handleSetDropdownMenu()} spy={true} smooth={true} duration={500}>Galeria</Link></li>
-            <li><Link to='ourproducts' onClick={() => handleSetDropdownMenu()} spy={true} smooth={true} duration={500}>Nasze produkty</Link></li>
-            <li><Link to='contact' onClick={() => handleSetDropdownMenu()} spy={true} smooth={true} duration={500}>Kontakt</Link></li>
+            <Link to='home' onClick={() => handleSetDropdownMenu()} spy={true} smooth={true} duration={500}><li>Strona główna</li></Link>
+            <Link to='aboutus' onClick={() => handleSetDropdownMenu()} spy={true} smooth={true} duration={500}><li>O nas</li></Link>
+            <Link to='gallery' onClick={() => handleSetDropdownMenu()} spy={true} smooth={true} duration={500}><li>Galeria</li></Link>
+            <Link to='ourproducts' onClick={() => handleSetDropdownMenu()} spy={true} smooth={true} duration={500}><li>Nasze produkty</li></Link>
+            <Link to='contact' onClick={() => handleSetDropdownMenu()} spy={true} smooth={true} duration={500}><li>Kontakt</li></Link>
           </ul>
         }
       </div>
