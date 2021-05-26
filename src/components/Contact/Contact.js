@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Contact.module.scss';
 import { Container } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,8 +6,16 @@ import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { settings } from '../../settings.js';
 import emailjs from 'emailjs-com';
 import FootBar from '../FootBar/FootBar';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
+  const recaptchaRef = React.createRef();
+  const [token, setToken] = useState(0);
+
+  function onChange() {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    setToken(recaptchaValue);
+  }
 
   function sendEmail(e) {
     e.preventDefault();
@@ -27,7 +35,7 @@ const Contact = () => {
         <h2 className={styles.title}>Kontakt</h2>
         <div className={styles.contactWrapper}>
           <div className={styles.leftInfo}>
-            <form onSubmit={sendEmail}>
+            <form onSubmit={token.length > 0 ? sendEmail : null}>
               <label>
                 Twoje Imię: <input type="text" name="name" />
               </label>
@@ -40,7 +48,12 @@ const Contact = () => {
               <label>
                 Wiadomość: <textarea name="message"></textarea>
               </label>
-              <button type="submit">Wyślij wiadomość</button>
+              <ReCAPTCHA
+                sitekey='6LdNNfIaAAAAAMV_pNHAzkvFb3BCKE8ZMilmFCiF'
+                ref={recaptchaRef}
+                onChange={onChange}
+              />
+              <button type="submit" onClick={(e) => token.length > 0 ? null : e.preventDefault()}>Wyślij wiadomość</button>
             </form>
           </div>
           <div className={styles.rightInfo}>
