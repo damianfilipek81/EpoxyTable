@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const GalleryBox = ({ image, width, height, modalOpen }) => {
   return (
-    <div className={styles.root} style={{ height: height, maxWidth: width }} onClick={() => modalOpen(image)}>
+    <div className={styles.root} style={{ height: height, maxWidth: width }} onClick={() => modalOpen({image})}>
       <img src={image} alt=''></img>
     </div>
   )

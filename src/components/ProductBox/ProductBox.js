@@ -6,8 +6,10 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import CardActions from '@material-ui/core/CardActions';
 
-const ProductBox = ({ name, description, image, price }) => (
+const ProductBox = ({ name, description, image, price, modalOpen }) => (
   <Card className={styles.root}>
     <CardActionArea className={styles.wrapper}>
       <div className={styles.imageWrapper}>
@@ -31,6 +33,9 @@ const ProductBox = ({ name, description, image, price }) => (
         </Typography>
       </CardContent>
     </CardActionArea>
+    <CardActions>
+      <Button variant="outlined" onClick={() => modalOpen({image, product: true})}>Więcej informacji</Button>
+    </CardActions>
   </Card>
 )
 
@@ -39,5 +44,6 @@ ProductBox.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   price: PropTypes.string,
+  modalOpen: PropTypes.func,
 }
 export default ProductBox;

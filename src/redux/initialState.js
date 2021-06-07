@@ -1,3 +1,5 @@
+import {settings} from '../settings';
+
 const initialState = {
   home: [
     { image: 'https://cdn20.pamono.com/p/z/6/9/695063_umv9nwvmyy/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-1.jpg' },
@@ -26,37 +28,40 @@ const initialState = {
   ],
   products: [
     {
-      name: 'Lorem ipsum',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at blandit tellus. Donec suscipit ipsum eu nulla fringilla feugiat.',
+      name: 'Blaty stołów jadalnianych',
+      description: 'Zabezpieczane olejowoskiem z atestem spożywczym lub lakierem do kontaktu z żywnością.',
+      image: settings.products.jadalnia,
+      price: '1800'
+    },
+    {
+      name: 'Blaty stołów salonowych',
+      description: 'Zabezpieczane olejowoskiem lub lakierem. Możliwość zabezpieczenia olejowoskiem z atestem spożywczym lub lakierem do kontaktu z żywnością',
+      image: settings.products.salon,
+      price: '3300'
+    },
+    {
+      name: 'Blaty łazienkowe',
+      description: 'Zabezpieczene lakierem wodoodpornym.',
+      image: settings.products.lazienka,
+      price: '1250'
+    },
+    {
+      name: 'Blaty kuchenne',
+      description: 'Zabezpieczane olejowoskiem z atestem spożywczym lub lakierem do kontaktu z żywnością.',
       image: 'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg',
       price: '2000'
     },
     {
-      name: 'Lorem ipsum',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at blandit tellus. Donec suscipit ipsum eu nulla fringilla feugiat.',
-      image: 'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg',
-      price: '2000'
-    },
-    {
-      name: 'Lorem ipsum',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at blandit tellus. Donec suscipit ipsum eu nulla fringilla feugiat.',
-      image: 'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg',
-      price: '2000'
-    },
-    {
-      name: 'Lorem ipsum',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at blandit tellus. Donec suscipit ipsum eu nulla fringilla feugiat.',
-      image: 'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg',
-      price: '2000'
-    },
-    {
-      name: 'Lorem ipsum',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at blandit tellus. Donec suscipit ipsum eu nulla fringilla feugiat.',
-      image: 'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg',
-      price: '2000'
+      name: 'Stoliki kawowe',
+      description: 'Zabezpieczane olejowoskiem lub lakierem. Możliwość zabezpieczenia olejowoskiem z atestem spożywczym lub lakierem do kontaktu z żywnością.',
+      image: settings.products.kawowy,
+      price: '900'
     }
   ],
-  modal: null,
+  modal: {
+    image: null,
+    product: false,
+  },
 
 }
 

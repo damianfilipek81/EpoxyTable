@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './OurProducts.module.scss';
 import { Container } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import ProductBox from '../ProductBox/ProductBox';
+import ProductBox from '../ProductBox/ProductBoxContainer';
 import Slider from "react-slick";
 
 

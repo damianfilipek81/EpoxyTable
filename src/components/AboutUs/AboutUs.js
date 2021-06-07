@@ -23,14 +23,14 @@ const AboutUs = () => {
             <img alt='' src={settings.aboutUs.aboutUs1}></img>
           </div>
           <div className={styles.description}>
-            <h3>Lorem ipsum dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus felis nulla, feugiat id viverra vehicula, rutrum a justo.</p>
+            <h3>Jakość</h3>
+            <p>Jesteśmy firmą która starannie dobiera odpowiednie kawałki drewna do każdego zamówienia tak by każdy blat był unikatowy.</p>
           </div>
         </div>
         <div className={styles.sectionWrapper}>
           <div className={styles.description}>
-            <h3>Lorem ipsum dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus felis nulla, feugiat id viverra vehicula, rutrum a justo.</p>
+            <h3>Precyzja</h3>
+            <p>Cenimy sobie staranność i precyzję wykonywanych zamówień, a na rynku wyróżnia nas indywidualne podejście do Klienta i konkurencyjne ceny.</p>
           </div>
           <div className={styles.imageWrapper}>
             <img alt='' src={settings.aboutUs.aboutUs2}></img>
