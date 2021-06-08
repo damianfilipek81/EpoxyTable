@@ -31,39 +31,46 @@ const initialState = {
       name: 'Blaty stołów jadalnianych',
       description: 'Zabezpieczane olejowoskiem z atestem spożywczym lub lakierem do kontaktu z żywnością.',
       image: settings.products.jadalnia,
-      price: '1800'
+      price: '1800',
+      id: 1
     },
     {
       name: 'Blaty stołów salonowych',
       description: 'Zabezpieczane olejowoskiem lub lakierem. Możliwość zabezpieczenia olejowoskiem z atestem spożywczym lub lakierem do kontaktu z żywnością',
       image: settings.products.salon,
-      price: '3300'
+      price: '3300',
+      id: 2
     },
     {
       name: 'Blaty łazienkowe',
       description: 'Zabezpieczene lakierem wodoodpornym.',
       image: settings.products.lazienka,
-      price: '1250'
+      price: '1250',
+      id: 3
     },
     {
       name: 'Blaty kuchenne',
       description: 'Zabezpieczane olejowoskiem z atestem spożywczym lub lakierem do kontaktu z żywnością.',
       image: 'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg',
-      price: '2000'
+      price: '2000',
+      id: 4
     },
     {
       name: 'Stoliki kawowe',
       description: 'Zabezpieczane olejowoskiem lub lakierem. Możliwość zabezpieczenia olejowoskiem z atestem spożywczym lub lakierem do kontaktu z żywnością.',
       image: settings.products.kawowy,
-      price: '900'
+      price: '900',
+      id: 5
     }
   ],
   modal: {
     image: null,
     product: false,
+    id: null,
   },
-  modalProducts: {
-    jadalnia: {
+  modalProducts: [
+    {
+      id: 1,
       description: 'Wymiary blatu jadalnianego wykonywane są na życzenie klienta, poniżej przykładowe wymiary.',
       types: [
         'blat jadalniany z dębu (kolor żywicy do wyboru) 110x70x4',
@@ -82,24 +89,26 @@ const initialState = {
         '18', '18', '18', '18', '18', '18', '18', '18'
       ]
     },
-    salon: {
+    {
+      id: 2,
       description: 'Wymiary blatu salonowego wykonywane są na życzenie klienta, poniżej przykładowe wymiary.',
-      types: [
-        'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 200x90x4',
-        'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 200x90x4',
-        'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 225x100x4',
-        'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 225x100x4',
-        'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 250x90x4',
-        'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 250x90x4',
-      ],
-      prices: [
-        '3300', '3400', '3700', '3800', '4200', '4300'
-      ],
-      time: [
-        '21', '21', '21', '21', '21', '21'
-      ]
+        types: [
+          'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 200x90x4',
+          'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 200x90x4',
+          'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 225x100x4',
+          'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 225x100x4',
+          'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 250x90x4',
+          'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 250x90x4',
+        ],
+        prices: [
+          '3300', '3400', '3700', '3800', '4200', '4300'
+        ],
+        time: [
+          '21', '21', '21', '21', '21', '21'
+        ]
     },
-    lazienka: {
+    {
+      id: 3,
       description: 'Wymiary blatu łazienkowego wykonywane są na życzenie klienta, poniżej przykładowe wymiary.',
       types: [
         'blat łazienkowy z dębu lub jesionu (kolor żywicy do wyboru) 90x50x4',
@@ -116,7 +125,8 @@ const initialState = {
         '21', '21', '21', '21', '21', '21'
       ]
     },
-    kuchnia: {
+    {
+      id: 4,
       description: 'Wymiary blatu kuchennego wykonywane są na życzenie klienta, poniżej przykładowe wymiary.',
       types: [
         'blat kuchenny z dębu lub jesionu (kolor żywicy do wyboru) 250x60x4',
@@ -133,7 +143,8 @@ const initialState = {
         '21', '21', '21', '21', '21', '21'
       ]
     },
-    kawowy: {
+    {
+      id: 5,
       description: '',
       types: [
         'Stolik kawowy z orzecha włoskiego, (kolor żywicy do wyboru). Różne rozmiary na zamówienie według wizualizacji klienta.'
@@ -145,7 +156,8 @@ const initialState = {
         '14'
       ]
     },
-    nogi: {
+    {
+      id: 5,
       description: 'Do stołów i stolik wykonujemy nogi:',
       types: [
         'Nogi Typu prostokątnego lub w kształcie litery X połączone w stelaż',
@@ -156,7 +168,7 @@ const initialState = {
         'Stoły jadalniane: 600-800zł /n Stoły salonowe: 1000-1600',
       ]
     }
-  }
+  ]
 }
 
 export default initialState;

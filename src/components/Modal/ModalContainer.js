@@ -1,9 +1,10 @@
 import { connect } from 'react-redux'
 import Modal from './Modal.js';
-import {getModalData, modalClose} from '../../redux/modalRedux';
+import {getModalData, modalClose, getModalProductsData} from '../../redux/modalRedux';
 
 const mapStateToProps = state => ({
   modalData: getModalData(state),
+  modalProductsData: getModalProductsData(state),
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CardActions from '@material-ui/core/CardActions';
 
-const ProductBox = ({ name, description, image, price, modalOpen }) => (
+const ProductBox = ({ name, description, image, price, modalOpen, id }) => (
   <Card className={styles.root}>
     <CardActionArea className={styles.wrapper}>
       <div className={styles.imageWrapper}>
@@ -34,7 +34,7 @@ const ProductBox = ({ name, description, image, price, modalOpen }) => (
       </CardContent>
     </CardActionArea>
     <CardActions>
-      <Button variant="outlined" onClick={() => modalOpen({image, product: true})}>Więcej informacji</Button>
+      <Button variant="outlined" onClick={() => modalOpen({image, product: true, id })}>Więcej informacji</Button>
     </CardActions>
   </Card>
 )
@@ -45,5 +45,6 @@ ProductBox.propTypes = {
   image: PropTypes.string,
   price: PropTypes.string,
   modalOpen: PropTypes.func,
+  id: PropTypes.number,
 }
 export default ProductBox;

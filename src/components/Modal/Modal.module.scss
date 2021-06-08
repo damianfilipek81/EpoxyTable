@@ -6,7 +6,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: infiniteBackground 5s infinite alternate;
+  // animation: infiniteBackground 5s infinite alternate;
   z-index: 999;
 
   img {
@@ -17,34 +17,48 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .wrapper {
+    width: 90%;
+    height: 80%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h3{
+      text-align: center;
+    }
+  }
 }
 
 .modalClose {
   display: none;
 }
 
-@keyframes infiniteBackground {
-  from {
-    background: rgba(0, 0, 0, 0.3);
-  }
-  to {
-    background: rgba(0, 0, 0, 0.7);
-  }
-}
+// @keyframes infiniteBackground {
+//   from {
+//     background: rgba(0, 0, 0, 0.3);
+//   }
+//   to {
+//     background: rgba(0, 0, 0, 0.7);
+//   }
+// }
 
-@-webkit-keyframes infiniteBackground {
-  from {
-    background: rgba(0, 0, 0, 0.3);
-  }
-  to {
-    background: rgba(0, 0, 0, 0.7);
-  }
-}
-@-moz-keyframes infiniteBackground {
-  from {
-    background: rgba(0, 0, 0, 0.3);
-  }
-  to {
-    background: rgba(0, 0, 0, 0.7);
-  }
-}
+// @-webkit-keyframes infiniteBackground {
+//   from {
+//     background: rgba(0, 0, 0, 0.3);
+//   }
+//   to {
+//     background: rgba(0, 0, 0, 0.7);
+//   }
+// }
+// @-moz-keyframes infiniteBackground {
+//   from {
+//     background: rgba(0, 0, 0, 0.3);
+//   }
+//   to {
+//     background: rgba(0, 0, 0, 0.7);
+//   }
+// }

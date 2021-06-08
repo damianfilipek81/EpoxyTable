@@ -1,6 +1,7 @@
 /* selectors */
 
 export const getModalData = ({ modal }) => modal;
+export const getModalProductsData = ({ modalProducts }) => modalProducts;
 
 /* action name creator */
 const reducerName = 'modal';
