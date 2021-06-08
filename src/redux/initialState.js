@@ -72,101 +72,67 @@ const initialState = {
     {
       id: 1,
       description: 'Wymiary blatu jadalnianego wykonywane są na życzenie klienta, poniżej przykładowe wymiary.',
-      types: [
-        'blat jadalniany z dębu (kolor żywicy do wyboru) 110x70x4',
-        'blat jadalniany z orzecha włoskiego (kolor żywicy do wyboru) 110x70x4',
-        'blat jadalniany z dębu (kolor żywicy do wyboru) 130x80x4',
-        'blat jadalniany z orzecha włoskiego (kolor żywicy do wyboru) 130x80x4',
-        'blat jadalniany z dębu (kolor żywicy do wyboru) 150x90x4',
-        'blat jadalniany z orzecha włoskiego (kolor żywicy do wyboru) 150x90x4',
-        'blat jadalniany z dębu (kolor żywicy do wyboru) 170x90x4',
-        'blat jadalniany z orzecha włoskiego (kolor żywicy do wyboru) 170x90x4',
+      products: [
+        {name: 'blat jadalniany z dębu (kolor żywicy do wyboru) 110x70x4', price: '1800', date: '18'},
+        {name: 'blat jadalniany z orzecha włoskiego (kolor żywicy do wyboru) 110x70x4', price: '1900', date: '18'},
+        {name: 'blat jadalniany z dębu (kolor żywicy do wyboru) 130x80x4', price: '2050', date: '18'},
+        {name: 'blat jadalniany z orzecha włoskiego (kolor żywicy do wyboru) 130x80x4', price: '2150', date: '18'},
+        {name: 'blat jadalniany z dębu (kolor żywicy do wyboru) 150x90x4', price: '2300', date: '18'},
+        {name: 'blat jadalniany z orzecha włoskiego (kolor żywicy do wyboru) 150x90x4', price: '2400', date: '18'},
+        {name: 'blat jadalniany z dębu (kolor żywicy do wyboru) 170x90x4', price: '2550', date: '18'},
+        {name: 'blat jadalniany z orzecha włoskiego (kolor żywicy do wyboru) 170x90x4', price: '2650', date: '18'},
       ],
-      prices: [
-        '1800', '1900', '2050', '2150', '2300', '2400', '2550', '2650'
-      ],
-      time: [
-        '18', '18', '18', '18', '18', '18', '18', '18'
-      ]
     },
     {
       id: 2,
       description: 'Wymiary blatu salonowego wykonywane są na życzenie klienta, poniżej przykładowe wymiary.',
-        types: [
-          'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 200x90x4',
-          'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 200x90x4',
-          'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 225x100x4',
-          'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 225x100x4',
-          'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 250x90x4',
-          'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 250x90x4',
+        products: [
+          {name: 'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 200x90x4', price: '3300', date: '21'},
+          {name: 'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 200x90x4', price: '3400', date: '21'},
+          {name: 'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 225x100x4', price: '3700', date: '21'},
+          {name: 'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 225x100x4', price: '3800', date: '21'},
+          {name: 'blat salonowy z dębu lub jesionu (kolor żywicy do wyboru) 250x90x4', price: '4200', date: '21'},
+          {name: 'blat salonowy z z orzecha włoskiego (kolor żywicy do wyboru) 250x90x4', price: '4300', date: '21'},
         ],
-        prices: [
-          '3300', '3400', '3700', '3800', '4200', '4300'
-        ],
-        time: [
-          '21', '21', '21', '21', '21', '21'
-        ]
     },
     {
       id: 3,
       description: 'Wymiary blatu łazienkowego wykonywane są na życzenie klienta, poniżej przykładowe wymiary.',
-      types: [
-        'blat łazienkowy z dębu lub jesionu (kolor żywicy do wyboru) 90x50x4',
-        'blat łazienkowy z z orzecha włoskiego (kolor żywicy do wyboru) 90x50x4',
-        'blat łazienkowy z dębu lub jesionu (kolor żywicy do wyboru) 110x60x4',
-        'blat łazienkowy z z orzecha włoskiego (kolor żywicy do wyboru) 110x60x4',
-        'blat łazienkowy z dębu lub jesionu (kolor żywicy do wyboru) 130x60x4',
-        'blat łazienkowy z z orzecha włoskiego (kolor żywicy do wyboru) 130x60x4',
+      products: [
+        {name: 'blat łazienkowy z dębu lub jesionu (kolor żywicy do wyboru) 90x50x4', price: '1250', date: '21'},
+        {name: 'blat łazienkowy z z orzecha włoskiego (kolor żywicy do wyboru) 90x50x4', price: '1300', date: '21'},
+        {name: 'blat łazienkowy z dębu lub jesionu (kolor żywicy do wyboru) 110x60x4', price: '1450', date: '21'},
+        {name: 'blat łazienkowy z z orzecha włoskiego (kolor żywicy do wyboru) 110x60x4', price: '1500', date: '21'},
+        {name: 'blat łazienkowy z dębu lub jesionu (kolor żywicy do wyboru) 130x60x4', price: '1650', date: '21'},
+        {name: 'blat łazienkowy z z orzecha włoskiego (kolor żywicy do wyboru) 130x60x4', price: '1700', date: '21'},
       ],
-      prices: [
-        '1250', '1300', '1450', '1500', '1650', '1700'
-      ],
-      time: [
-        '21', '21', '21', '21', '21', '21'
-      ]
     },
     {
       id: 4,
       description: 'Wymiary blatu kuchennego wykonywane są na życzenie klienta, poniżej przykładowe wymiary.',
-      types: [
-        'blat kuchenny z dębu lub jesionu (kolor żywicy do wyboru) 250x60x4',
-        'blat kuchenny z orzecha włoskiego (kolor żywicy do wyboru) 250x60x4',
-        'blat kuchenny z dębu lub jesionu (kolor żywicy do wyboru) 300x60x4',
-        'blat kuchenny z orzecha włoskiego (kolor żywicy do wyboru) 300x60x4',
-        'blat kuchenny z dębu lub jesionu (kolor żywicy do wyboru) 350x60x4',
-        'blat kuchenny z orzecha włoskiego (kolor żywicy do wyboru) 350x60x4',
+      products: [
+        {name: 'blat kuchenny z dębu lub jesionu (kolor żywicy do wyboru) 250x60x4', price: '3000', date: '21'},
+        {name: 'blat kuchenny z orzecha włoskiego (kolor żywicy do wyboru) 250x60x4', price: '3100', date: '21'},
+        {name: 'blat kuchenny z dębu lub jesionu (kolor żywicy do wyboru) 300x60x4', price: '4000', date: '21'},
+        {name: 'blat kuchenny z orzecha włoskiego (kolor żywicy do wyboru) 300x60x4', price: '4100', date: '21'},
+        {name: 'blat kuchenny z dębu lub jesionu (kolor żywicy do wyboru) 350x60x4', price: '5000', date: '21'},
+        {name: 'blat kuchenny z orzecha włoskiego (kolor żywicy do wyboru) 350x60x4', price: '5100', date: '21'},
       ],
-      prices: [
-        '3000', '3100', '4000', '4100', '5000', '5100'
-      ],
-      time: [
-        '21', '21', '21', '21', '21', '21'
-      ]
     },
     {
       id: 5,
       description: '',
-      types: [
-        'Stolik kawowy z orzecha włoskiego, (kolor żywicy do wyboru). Różne rozmiary na zamówienie według wizualizacji klienta.'
+      products: [
+        {name: 'Stolik kawowy z orzecha włoskiego, (kolor żywicy do wyboru). Różne rozmiary na zamówienie według wizualizacji klienta.', price: '900 - 1500', date: '14'}
       ],
-      prices: [
-        '900 - 1500'
-      ],
-      time: [
-        '14'
-      ]
     },
     {
-      id: 5,
+      id: 6,
       description: 'Do stołów i stolik wykonujemy nogi:',
-      types: [
-        'Nogi Typu prostokątnego lub w kształcie litery X połączone w stelaż',
-        'Nogi typu „pająk”'
+      products: [
+        {name: 'Nogi Typu prostokątnego lub w kształcie litery X połączone w stelaż', price: 'Stoły jadalniane: 400-500, Stoły salonowe: 500-700', date:'-'},
+        {name: 'Nogi typu „pająk”', price: 'Stoły jadalniane: 600-800, Stoły salonowe: 1000-1600', date: '-'}
       ],
-      prices: [
-        'Stoły jadalniane: 400-500zł /n Stoły salonowe: 500-700',
-        'Stoły jadalniane: 600-800zł /n Stoły salonowe: 1000-1600',
-      ]
     }
   ]
 }
