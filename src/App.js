@@ -53,6 +53,7 @@ function App() {
         <Element name='ourproducts' ><OurProducts /></Element >
         <Element name='contact' ><Contact /></Element >
         <SideMenu />
+        <Modal />
         <MessengerCustomerChat
           pageId="104202698391585"
           appId="3976685792416337"
