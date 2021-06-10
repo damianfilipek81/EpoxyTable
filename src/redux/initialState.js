@@ -51,7 +51,7 @@ const initialState = {
     {
       name: 'Blaty kuchenne',
       description: 'Zabezpieczane olejowoskiem z atestem spożywczym lub lakierem do kontaktu z żywnością.',
-      image: 'https://cdn20.pamono.com/p/z/6/9/695063_riaxmaw5zt/river-olive-wood-and-epoxy-resin-table-by-andrea-toffanin-for-w-a-t-1988-4.jpg',
+      image: settings.products.kuchnia,
       price: '2000',
       id: 4
     },
@@ -60,6 +60,13 @@ const initialState = {
       description: 'Zabezpieczane olejowoskiem lub lakierem. Możliwość zabezpieczenia olejowoskiem z atestem spożywczym lub lakierem do kontaktu z żywnością.',
       image: settings.products.kawowy,
       price: '900',
+      id: 5
+    },
+    {
+      name: 'Nogi',
+      description: '',
+      image: settings.products.nogi,
+      price: '400',
       id: 5
     }
   ],

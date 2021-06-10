@@ -21,7 +21,7 @@ function App() {
     setCurrentPage(number)
   };
 
-  return screenWidth > 425 ? (
+  return screenWidth > 768 ? (
     <Provider store={store}>
       <div>
         <ReactPageScroller

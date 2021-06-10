@@ -5,6 +5,8 @@ import jadalnia from './Images/jadalnia.jpg';
 import salon from './Images/salon.jpg';
 import lazienka from './Images/lazienkowy.jpg';
 import kawowy from './Images/kawowy.jpg';
+import kuchnia from './Images/kuchnia.jpg';
+import nogi from './Images/nogi.jfif';
 
 export const settings = {
   aboutUs: {
@@ -21,5 +23,7 @@ export const settings = {
     salon,
     lazienka,
     kawowy,
+    kuchnia,
+    nogi
   }
 }

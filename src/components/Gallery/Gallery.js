@@ -19,7 +19,7 @@ const Gallery = ({ galleryImages }) => {
   const width = [400, 300, 350, 300, 350, 400];
   const height = [200, 300, 270, 300, 270, 200];
 
-  return screenWidth > 426 ? (
+  return screenWidth > 768 ? (
     <div className={styles.root}>
       <Container className={styles.container}>
         <h2 className={styles.title}>Galeria</h2>

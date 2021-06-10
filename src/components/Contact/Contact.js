@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styles from './Contact.module.scss';
 import { Container } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,12 +11,17 @@ import ReCAPTCHA from "react-google-recaptcha";
 const Contact = () => {
   const recaptchaRef = React.createRef();
   const [token, setToken] = useState(0);
+  const [error, setError] = useState(null);
 
   function onChange() {
     const recaptchaValue = recaptchaRef.current.getValue();
     setToken(recaptchaValue);
   }
 
+  function handleError(e) {
+    e.preventDefault();
+    setError(true);
+  }
   function sendEmail(e) {
     e.preventDefault();
 
@@ -37,23 +42,24 @@ const Contact = () => {
           <div className={styles.leftInfo}>
             <form onSubmit={token.length > 0 ? sendEmail : null}>
               <label>
-                Twoje Imię: <input type="text" name="name" />
+                Twoje Imię: <input type="text" name="name" required/>
               </label>
               <label>
-                E-mail: <input type="email" name="email" />
+                E-mail: <input type="email" name="email" required/>
               </label>
               <label>
                 Nr telefonu (opcjonalnie): <input type="tel" name="tel" />
               </label>
               <label>
-                Wiadomość: <textarea name="message"></textarea>
+                Wiadomość: <textarea name="message" required></textarea>
               </label>
+              {error === true && <label className={styles.error}>Musisz wypełnić formularz!</label>}
               <ReCAPTCHA
                 sitekey='6LdNNfIaAAAAAMV_pNHAzkvFb3BCKE8ZMilmFCiF'
                 ref={recaptchaRef}
                 onChange={onChange}
               />
-              <button type="submit" onClick={(e) => token.length > 0 ? null : e.preventDefault()}>Wyślij wiadomość</button>
+              <button type="submit" onClick={(e) => token.length > 0 ? null : handleError(e)}>Wyślij wiadomość</button>
             </form>
           </div>
           <div className={styles.rightInfo}>

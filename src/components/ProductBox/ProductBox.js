@@ -19,22 +19,20 @@ const ProductBox = ({ name, description, image, price, modalOpen, id }) => (
           title={name}
         />
       </div>
-      <CardContent>
-        <div className={styles.titles}>
-          <Typography gutterBottom variant="h5" component="h2">
-            {name}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
-            Od {price} zł!
+      <CardContent className={styles.content}>
+        <Typography gutterBottom variant="h5" component="h2">
+          {name}
         </Typography>
-        </div>
+        <Typography gutterBottom variant="h5" component="h2">
+          Od {price} zł!
+        </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
           {description}
         </Typography>
       </CardContent>
     </CardActionArea>
     <CardActions>
-      <Button variant="outlined" onClick={() => modalOpen({image, product: true, id })}>Więcej informacji</Button>
+      <Button className={styles.button} variant="outlined" onClick={() => modalOpen({ image, product: true, id })}>Więcej informacji</Button>
     </CardActions>
   </Card>
 )
