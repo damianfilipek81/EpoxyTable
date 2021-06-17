@@ -24,13 +24,23 @@ const Modal = ({ modalData, modalClose, modalProductsData }) => {
             <div key={data.id} className={styles.wrapper}>
               <p onClick={() => modalClose({ image: null, product: false })}>X</p>
               <h3>{data.description}</h3>
+              <h5>{data.priceChange}</h5>
               <Table>
                 <TableHead>
-                  <TableRow>
-                    <TableCell>Produkt</TableCell>
-                    <TableCell align="right">Czas realizacji (dni)</TableCell>
-                    <TableCell align="right">Cena netto (zł)</TableCell>
-                  </TableRow>
+                  {data.id === 5 || data.id === 6 ?
+                    <TableRow>
+                      <TableCell>Produkt</TableCell>
+                      <TableCell align="right">Czas realizacji (dni)</TableCell>
+                      <TableCell align="right">Cena netto (zł)</TableCell>
+                    </TableRow> :
+                    <TableRow>
+                      <TableCell>Produkt</TableCell>
+                      <TableCell align="right">Czas realizacji (dni)</TableCell>
+                      <TableCell align="right">Jeden kanion cena netto (zł)</TableCell>
+                      <TableCell align="right">Dwa kaniony cena netto (zł)</TableCell>
+                      <TableCell align="right">Żywica pośrodku i po bokach netto (zł)</TableCell>
+                    </TableRow>
+                  }
                 </TableHead>
                 <TableBody>
                   {data.products.map((product) => (
@@ -39,7 +49,9 @@ const Modal = ({ modalData, modalClose, modalProductsData }) => {
                         {product.name}
                       </TableCell>
                       <TableCell align="right">{product.date}</TableCell>
-                      <TableCell align="right">{product.price}</TableCell>
+                      <TableCell align="right">{product.priceOne}</TableCell>
+                      <TableCell align="right">{product.priceTwo}</TableCell>
+                      <TableCell align="right">{product.priceThree}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

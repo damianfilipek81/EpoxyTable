@@ -7,6 +7,20 @@
   overflow: hidden;
 }
 
+.imageWrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(40, 66, 67);
+
+  img{
+    object-fit: cover;
+    width: 70%;
+    height: 70%;
+    margin-top: 70px;
+  }
+}
 .carouselWrapper {
   div {
     height: 100vh;
@@ -37,6 +51,12 @@
       div{
         height: calc(100vh - 70px);
         top: 70px;
+      }
+    }
+
+    .imageWrapper{
+      img{
+        width: 100%;
       }
     }
   }

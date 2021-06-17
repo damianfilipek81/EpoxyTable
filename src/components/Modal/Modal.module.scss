@@ -76,7 +76,8 @@
       }
     }
 
-    h3 {
+    h3,
+    h5 {
       text-align: center;
     }
   }
@@ -93,13 +94,14 @@
       width: 95%;
       height: 95%;
       padding: 5px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
+      display: block;
+      padding-top: 25px;
       p {
-        top: 0px;
-        right: 0px;
+        top: 5px;
+        right: 5px;
+        height: 35px;
+        width: 35px;
+        font-size: 31px;
       }
 
       h3 {
@@ -110,7 +112,10 @@
         padding: 2px;
       }
 
-      table,tr,th,td{
+      table,
+      tr,
+      th,
+      td {
         font-size: 13px;
       }
     }
@@ -118,19 +123,17 @@
 }
 
 @media (max-width: 370px) {
-  .modalOpen{
-    .wrapper{
-      overflow: auto;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      h3{
+  .modalOpen {
+    .wrapper {
+      h3 {
         font-size: 17px;
         padding-top: 15px;
       }
 
-      table,tr,th,td{
+      table,
+      tr,
+      th,
+      td {
         font-size: 12px;
       }
     }

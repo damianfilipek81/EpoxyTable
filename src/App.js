@@ -28,7 +28,7 @@ function App() {
           pageOnChange={handlePageChange}
           customPageNumber={currentPage}
           animationTimer={500}
-          renderAllPagesOnFirstRender={true}
+          renderAllPagesOnFirstRender={false}
         >
           <Home handlePageChange={handlePageChange} />
           <AboutUs />
@@ -43,7 +43,7 @@ function App() {
         />
         <Modal />
       </div>
-    </Provider>
+    </Provider >
   ) : (
     <Provider store={store}>
       <div>
