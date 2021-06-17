@@ -34,7 +34,7 @@ const initialState = {
     },
     {
       name: 'Blaty łazienkowe',
-      description: 'Zabezpieczene lakierem wodoodpornym.',
+      description: 'Zabezpieczane lakierem wodoodpornym.',
       image: settings.products.lazienka,
       priceOne: '1250',
       id: 3

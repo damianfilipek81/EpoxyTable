@@ -43,17 +43,29 @@ const Modal = ({ modalData, modalClose, modalProductsData }) => {
                   }
                 </TableHead>
                 <TableBody>
-                  {data.products.map((product) => (
-                    <TableRow key={product.name}>
-                      <TableCell component="th" scope="row">
-                        {product.name}
-                      </TableCell>
-                      <TableCell align="right">{product.date}</TableCell>
-                      <TableCell align="right">{product.priceOne}</TableCell>
-                      <TableCell align="right">{product.priceTwo}</TableCell>
-                      <TableCell align="right">{product.priceThree}</TableCell>
-                    </TableRow>
-                  ))}
+                  {data.products.map((product) => {
+                    return data.id === 5 || data.id === 6 ?
+                      (
+                        <TableRow key={product.name}>
+                          <TableCell component="th" scope="row">
+                            {product.name}
+                          </TableCell>
+                          <TableCell align="right">{product.date}</TableCell>
+                          <TableCell align="right">{product.priceOne}</TableCell>
+                        </TableRow>
+                      ) :
+                      (
+                        <TableRow key={product.name}>
+                          <TableCell component="th" scope="row">
+                            {product.name}
+                          </TableCell>
+                          <TableCell align="right">{product.date}</TableCell>
+                          <TableCell align="right">{product.priceOne}</TableCell>
+                          <TableCell align="right">{product.priceTwo}</TableCell>
+                          <TableCell align="right">{product.priceThree}</TableCell>
+                        </TableRow>
+                      )
+                  })}
                 </TableBody>
               </Table>
             </div>

@@ -24,7 +24,7 @@ const AboutUs = () => {
           </div>
           <div className={styles.description}>
             <h3>Jakość</h3>
-            <p>Jesteśmy firmą która starannie dobiera odpowiednie kawałki drewna do każdego zamówienia tak by każdy blat był unikatowy.</p>
+            <p>Jesteśmy firmą, która starannie dobiera odpowiednie kawałki drewna do każdego zamówienia tak, by każdy blat był unikatowy.</p>
           </div>
         </div>
         <div className={styles.sectionWrapper}>

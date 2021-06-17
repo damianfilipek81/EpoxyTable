@@ -7,12 +7,13 @@ import { settings } from '../../settings.js';
 import emailjs from 'emailjs-com';
 import FootBar from '../FootBar/FootBar';
 import ReCAPTCHA from "react-google-recaptcha";
+require('dotenv').config()
 
 const Contact = () => {
   const recaptchaRef = React.createRef();
   const [token, setToken] = useState(0);
   const [error, setError] = useState(null);
-
+  
   function onChange() {
     const recaptchaValue = recaptchaRef.current.getValue();
     setToken(recaptchaValue);
@@ -25,7 +26,7 @@ const Contact = () => {
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm('service_xtlmd8f', 'template_s86616e', e.target, 'user_hwBW1OLmSVFaG4qiASE5s')
+    emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE, process.env.REACT_APP_EMAIL_TEMPLATE, e.target, process.env.REACT_APP_EMAIL_USER)
       .then((result) => {
         console.log(result.text);
       }, (error) => {
@@ -55,7 +56,7 @@ const Contact = () => {
               </label>
               {error === true && <label className={styles.error}>Musisz wypełnić formularz!</label>}
               <ReCAPTCHA
-                sitekey='6LdNNfIaAAAAAMV_pNHAzkvFb3BCKE8ZMilmFCiF'
+                sitekey={process.env.REACT_APP_CAPTCHA}
                 ref={recaptchaRef}
                 onChange={onChange}
               />

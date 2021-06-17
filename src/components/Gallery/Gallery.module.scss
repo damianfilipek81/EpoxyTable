@@ -47,7 +47,8 @@
   .root {
     .container {
       flex-direction: column;
-
+      border: none;
+      padding: 0 5px;
       .carousel{
         position: inherit;
         transform: translateY(30%);

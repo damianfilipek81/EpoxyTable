@@ -11,16 +11,16 @@ import Contact from './components/Contact/Contact';
 import Modal from './components/Modal/ModalContainer';
 import { Element } from 'react-scroll'
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+require('dotenv').config()
 
 function App() {
   const [currentPage, setCurrentPage] = useState(null);
-
   const screenWidth = window.innerWidth;
 
   const handlePageChange = number => {
     setCurrentPage(number)
   };
-
+  
   return screenWidth > 768 ? (
     <Provider store={store}>
       <div>
@@ -38,8 +38,8 @@ function App() {
         </ReactPageScroller>
         <SideMenu handlePageChange={handlePageChange} />
         <MessengerCustomerChat
-          pageId="104202698391585"
-          appId="3976685792416337"
+          pageId = {process.env.REACT_APP_MESS_PAGE_ID}
+          appId= {process.env.REACT_APP_MESS_APP_ID}
         />
         <Modal />
       </div>
@@ -55,8 +55,8 @@ function App() {
         <SideMenu />
         <Modal />
         <MessengerCustomerChat
-          pageId="104202698391585"
-          appId="3976685792416337"
+          pageId = {process.env.REACT_APP_MESS_PAGE_ID}
+          appId= {process.env.REACT_APP_MESS_APP_ID}
         />
       </div >
     </Provider >

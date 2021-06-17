@@ -41,7 +41,7 @@ const Gallery = ({ galleryImages }) => {
   <div className={styles.root}>
       <Container className={styles.container}>
         <h2 className={styles.title}>Galeria</h2>
-        <Carousel emulateTouch className={styles.carousel}>
+        <Carousel emulateTouch className={styles.carousel} showThumbs={false}>
           {galleryImages.map(data => (
             <img src={data.image} alt='' key={galleryImages.indexOf(data)}></img>
           ))}
