@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-https://laughing-heisenberg-91cb9c.netlify.app/
+epoxytable.pl
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
