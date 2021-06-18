@@ -71,7 +71,7 @@ const Contact = () => {
             <h3>Nr. telefonu:</h3>
             <p>664 879 248</p>
             <h3>E-mail:</h3>
-            <p>DominikSolecki@interia.pl</p>
+            <p>epoxytable@interia.pl</p>
             <div className={styles.social}>
               <a href={settings.social.facebook}><span><FontAwesomeIcon icon={faFacebookF} /></span></a>
               <a href={settings.social.instagram}><span><FontAwesomeIcon icon={faInstagram} /></span></a>
